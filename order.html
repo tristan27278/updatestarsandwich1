@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER STAR SANDWICH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Potta+One&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+        }
+
+        header h1 {
+            font-family: "potta one", sans-serif;
+        }
+
+        .menu-order {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+       .menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 15px; 
+    width: 70%;
+    height: 70px;
+    padding: 15px 20px;
+    color: aliceblue;
+    border-radius: 25px;
+    font-family: "Mozilla Text", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.menu i {
+    font-size: 28px;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .menu i {
+    position: static;
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+
+  .menu h5 {
+    font-size: 14px;
+  }
+}
+
+
+        .m1 {
+            background-color: #5dade2;
+        }
+
+        .m2 {
+            background-color: #7dcea0;
+        }
+
+        .m3 {
+            background-color: rgb(211, 38, 182);
+        }
+
+        .m4 {
+            background-color: #eb984e;
+        }
+        .social{
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+            gap: 30px;
+        }
+        .social a {
+            color: rgb(39, 44, 48);
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>STAR SANDWICH</h1>
+    </header>
+    <div class="menu-order">
+        <div class="menu m1">
+            <i class="fa-solid fa-globe"></i>
+            <h5>WEBSITE</h5>
+        </div>
+        <div class="menu m2">
+            <i class="fa-brands fa-whatsapp"></i>
+            <h5>DELIVERY BY COURIER (WHATSAPP)</h5>
+        </div>
+        <div class="menu m3">
+            <i class="fa-brands fa-instagram"></i>
+            <h5>DELIVERY BY COURIER (INSTAGRAM)</h5>
+        </div>
+        <div class="menu m4">
+            <i class="fa-solid fa-store"></i>
+            <h5>SHOPEE</h5>
+        </div>
+
+    </div>
+    <footer>
+        <div class="social">
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-tiktok"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
