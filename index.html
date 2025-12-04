@@ -47,6 +47,7 @@
             gap: 20px;
             flex-wrap: wrap;
             font-family: "Potta One", sans-serif;
+            align-items: center;
         }
 
         .nav-menu a {
@@ -125,6 +126,7 @@
             opacity: 0;
             display: flex;
             justify-content: center;
+            align-items: center;
             text-decoration: none;
         }
 
@@ -148,7 +150,6 @@
             justify-items: center;
             padding: 20px;
             margin-top: 90px;
-
         }
 
         @media (min-width: 768px) {
@@ -201,8 +202,8 @@
                 text-align: center;
             }
 
-            footer>div,
-            footer>img {
+            footer > div,
+            footer > img {
                 margin-bottom: 20px;
             }
 
@@ -254,6 +255,54 @@
                 color: gold;
             }
         }
+
+        /* ==== DROPDOWN MENU ==== */
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropbtn {
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 16px;
+            padding: 10px 5px;
+            display: block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: maroon;
+            min-width: 180px;
+            border-radius: 0 0 10px 10px;
+            padding: 10px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 8px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .dropdown-content a:hover {
+            background: #8b0000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            color: gold;
+        }
     </style>
 </head>
 
@@ -261,55 +310,64 @@
     <header>
         <h1>STAR SANDWICH</h1>
         <nav class="nav-menu">
-            <a href="#">MENU</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">MENU</a>
+                <div class="dropdown-content">
+                    <a href="#">Varian Anggur</a>
+                    <a href="#">Varian Strawberry</a>
+                    <a href="#">Varian Pisang</a>
+                    <a href="#">Varian Mix</a>
+                </div>
+            </div>
             <a href="order.html">ORDER</a>
-            <a href="#" class="hide">LOCATIONS</a>
+            <a href="#" class="hide">ABOUT US</a>
             <a href="cart.html" class="hide"><i class="fa-solid fa-cart-shopping"></i></a>
         </nav>
     </header>
-    <a href="#" class="cart-hp">
+
+    <a href="cart.html" class="cart-hp">
         <i class="fa-solid fa-cart-shopping"></i>
     </a>
 
     <menu>
-        <div class="m-varian">
+        <div class="m-varian" data-nama="SANDWICH ANGGUR" data-harga="7000">
             <div class="v-img">
                 <img src="https://raw.githubusercontent.com/tristan27278/StarSandwich/refs/heads/main/img/Varian%20Anggur.png"
                     alt="sandwich anggur" class="img1">
             </div>
             <h3 class="nama-v">SANDWICH ANGGUR</h3>
             <p>Rp 7.000</p>
-            <a class="btn">BUY</a>
+            <button class="btn add-to-cart">BUY</button>
         </div>
 
-        <div class="m-varian">
+        <div class="m-varian" data-nama="SANDWICH STRAWBERRY" data-harga="7000">
             <div class="v-img">
-                <img src="https://raw.githubusercontent.com/tristan27278/StarSandwich/refs/heads/main/img/Varian%20Anggur.png"
-                    alt="sandwich anggur" class="img1">
+                <img src="https://raw.githubusercontent.com/tristan27278/StarSandwich/refs/heads/main/img/Varian%20Strawberry.png"
+                    alt="sandwich strawberry" class="img1">
             </div>
-            <h3 class="nama-v">SANDWICH ANGGUR</h3>
+            <h3 class="nama-v">SANDWICH STRAWBERRY</h3>
             <p>Rp 7.000</p>
-            <a class="btn">BUY</a>
+            <button class="btn add-to-cart">BUY</button>
         </div>
 
-        <div class="m-varian">
+        <div class="m-varian" data-nama="SANDWICH PISANG" data-harga="7000">
             <div class="v-img">
-                <img src="https://raw.githubusercontent.com/tristan27278/StarSandwich/refs/heads/main/img/Varian%20Anggur.png"
-                    alt="sandwich anggur" class="img1">
+                <img src="https://raw.githubusercontent.com/tristan27278/StarSandwich/refs/heads/main/img/Varian%20Pisang.png"
+                    alt="sandwich pisang" class="img1">
             </div>
-            <h3 class="nama-v">SANDWICH ANGGUR</h3>
+            <h3 class="nama-v">SANDWICH PISANG</h3>
             <p>Rp 7.000</p>
-            <a class="btn">BUY</a>
+            <button class="btn add-to-cart">BUY</button>
         </div>
 
-        <div class="m-varian">
+        <div class="m-varian" data-nama="SANDWICH MIX" data-harga="8000">
             <div class="v-img">
-                <img src="https://raw.githubusercontent.com/tristan27278/StarSandwich/refs/heads/main/img/Varian%20Anggur.png"
-                    alt="sandwich anggur" class="img1">
+                <img src="https://raw.githubusercontent.com/tristan27278/StarSandwich/refs/heads/main/img/Mix%20Varian.png"
+                    alt="sandwich mix" class="img1">
             </div>
-            <h3 class="nama-v">SANDWICH ANGGUR</h3>
-            <p>Rp 7.000</p>
-            <a class="btn">BUY</a>
+            <h3 class="nama-v">SANDWICH MIX</h3>
+            <p>Rp 8.000</p>
+            <button class="btn add-to-cart">BUY</button>
         </div>
     </menu>
 
@@ -341,9 +399,47 @@
     </footer>
 
     <div class="copyright">
-        <p>© 2024 STAR SANDWICH. All Rights Reserved.</p>
+        <p>© 2025 STAR SANDWICH. All Rights Reserved.</p>
     </div>
 
+    <script>
+    // Fungsi aman untuk menambah ke keranjang
+    function addToCart(nama, harga) {
+        if (!nama || !harga) {
+            console.warn("Data produk tidak lengkap:", { nama, harga });
+            alert("Produk ini tidak bisa ditambahkan.");
+            return;
+        }
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingItem = cart.find(item => item.nama === nama);
+        if (existingItem) {
+            existingItem.qty++;
+        } else {
+            cart.push({ nama: nama.trim(), harga: parseInt(harga), qty: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${nama} ditambahkan ke keranjang!`);
+    }
+
+    // Pasang event listener dengan validasi
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        const item = button.closest('.m-varian');
+        const nama = item?.dataset?.nama;
+        const harga = item?.dataset?.harga;
+
+        if (!nama || !harga) {
+            button.disabled = true;
+            button.textContent = "ERROR";
+            console.error("Produk tanpa data-nama atau data-harga:", item);
+            return;
+        }
+
+        button.addEventListener('click', () => {
+            addToCart(nama, harga);
+        });
+    });
+</script>
 </body>
 
 </html>
